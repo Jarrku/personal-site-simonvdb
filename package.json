@@ -1,0 +1,110 @@
+{
+  "name": "jarrku-personal-website",
+  "description": "Personal website Simon VDB",
+  "version": "1.0.0",
+  "author": "Simon Van den Broeck <simonvdbroeck@gmail.com>",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "graphql-types": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/graphql-types.d.ts",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "gatsby": "^1.9.256",
+    "gatsby-image": "^1.0.48",
+    "gatsby-link": "^1.6.41",
+    "graphql": "^0.11.7",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-fns": "^1.4.0",
+    "react-helmet": "^5.2.0",
+    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-react": "^0.79.1",
+    "smoothscroll-polyfill": "^0.4.3",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.1",
+    "@types/jest": "^22.2.3",
+    "@types/node": "^8.10.11",
+    "@types/react": "^16.3.13",
+    "@types/react-dom": "^16.0.5",
+    "@types/react-helmet": "5.0.0",
+    "@types/react-test-renderer": "^16.0.1",
+    "@types/webpack-env": "^1.13.6",
+    "babel-plugin-styled-components": "^1.5.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "gatsby-plugin-google-analytics": "1.0.31",
+    "gatsby-plugin-netlify": "^1.0.19",
+    "gatsby-plugin-offline": "1.0.15",
+    "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-plugin-react-next": "^1.0.11",
+    "gatsby-plugin-sharp": "1.6.44",
+    "gatsby-plugin-styled-components": "2.0.11",
+    "gatsby-plugin-typescript": "1.4.20",
+    "gatsby-source-filesystem": "1.5.35",
+    "gatsby-transformer-json": "1.0.17",
+    "gatsby-transformer-sharp": "1.6.24",
+    "graphql-code-generator": "^0.8.21",
+    "husky": "0.14.3",
+    "jest": "22.4.3",
+    "lint-staged": "7.0.5",
+    "prettier": "^1.12.1",
+    "raw-loader": "^0.5.1",
+    "react-test-renderer": "16.3.2",
+    "slash": "2.0.0",
+    "ts-jest": "22.4.4",
+    "ts-lint": "4.5.1",
+    "ts-loader": "^4.2.0",
+    "typescript": "2.8.3"
+  },
+  "browerslist": [
+    ">0.25%",
+    "not op_mini all"
+  ],
+  "jest": {
+    "globals": {
+      "__LINK_PREFIX__": "",
+      "__PREFIX_LINKS__": ""
+    },
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/templates/",
+      "/.cache"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "html"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --parser typescript --write",
+      "tslint --fix",
+      "git add"
+    ]
+  }
+}
