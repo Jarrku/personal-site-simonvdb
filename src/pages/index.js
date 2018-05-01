@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
-import Intro from '../components/Intro'
+import Welcome from '../components/Welcome'
 
 class IndexPage extends React.Component {
   render() {
     return (
       <Fragment>
-        <Intro />
+        <Welcome />
       </Fragment>
     )
   }

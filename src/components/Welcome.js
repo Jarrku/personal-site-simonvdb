@@ -23,7 +23,7 @@ const FadeInPage = styled.div`
   align-items: center;
 `
 
-const IntroContainer = styled.div`
+const GreetingContainer = styled.div`
   background-color: rgba(255, 255, 255, 0.7);
   text-align: center;
   display: flex;
@@ -32,7 +32,7 @@ const IntroContainer = styled.div`
   width: 100%;
 `
 
-const Intro = styled.h1`
+const Greeting = styled.h1`
   color: rgba(0, 0, 255, 0.7);
   font-size: 50px;
   margin: auto;
@@ -41,7 +41,7 @@ const Intro = styled.h1`
   font-size: 64px;`};
 `
 
-class IntroComponent extends React.Component {
+class Welcome extends React.Component {
   state = {
     show: false,
   }
@@ -55,13 +55,13 @@ class IntroComponent extends React.Component {
   render() {
     return (
       <FadeInPage show={this.state.show}>
-        <IntroContainer>
-          <Intro>Hello, I'm Simon</Intro>
-        </IntroContainer>
+        <GreetingContainer>
+          <Greeting>Hello, I'm Simon</Greeting>
+        </GreetingContainer>
         <ScrollButton />
       </FadeInPage>
     )
   }
 }
 
-export default IntroComponent
+export default Welcome
