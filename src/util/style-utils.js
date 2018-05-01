@@ -25,8 +25,8 @@ export const media = {
 }
 
 export const helpers = {
-  light: 'rgba(221, 234, 237, 0.75);',
-  dark: 'rgba(38, 101, 114, 0.75);',
-  skills: 'background-color: rgba(0,0,0,.15);',
-  title: 'rgb(13, 76, 89);',
+  light: 'rgba(221, 234, 237, 0.75)',
+  dark: 'rgba(38, 101, 114, 0.75)',
+  skills: 'background-color: rgba(0,0,0,.15)',
+  title: 'rgb(13, 76, 89)',
 };
