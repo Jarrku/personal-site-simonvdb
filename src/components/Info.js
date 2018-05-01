@@ -7,6 +7,7 @@ const Container = styled.div`
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 2px;
+  margin-bottom: 5px;
 `
 
 const Icon = styled.div`
@@ -24,7 +25,6 @@ const Span = styled.span`
   border-left: 1px solid #ddd;
   font-weight: 300;
   line-height: 50px;
-  padding-left: 10px;
   font-size: 14px;
 
   ${media.small`
@@ -36,7 +36,7 @@ const Span = styled.span`
   `};
 
   ${media.xlarge`
-    font-size: 26px
+    font-size: 20px
   `};
 `
 
@@ -48,15 +48,21 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
 `
 
 export default class Info extends React.Component {
   render() {
+    const { text, PreIcon, ButtonIcon, onClick } = this.props
     return (
       <Container>
-        <Icon>T</Icon>
-        <Span>Simon Van den Broeck</Span>
-        <Button>S</Button>
+        <Icon>
+          <PreIcon />
+        </Icon>
+        <Span>{text}</Span>
+        <Button onClick={onClick}>
+          <ButtonIcon />
+        </Button>
       </Container>
     )
   }

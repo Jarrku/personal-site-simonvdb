@@ -107,12 +107,52 @@ export default class Intro extends React.Component {
         </Item>
         <Item flex={2}>
           <Title>Information</Title>
-          <Info />
-          <P>Ives van Hoorne</P>
-          <P>me@ivesvh.com</P>
-          <P>Enschede, Netherlands</P>
+          <Info
+            text="Simon Van den Broeck"
+            PreIcon={PersonSVG}
+            ButtonIcon={PersonButton}
+            onClick={() => alert('test')}
+          />
+          <Info
+            text="simonvdbroeck@gmail.com"
+            PreIcon={PersonSVG}
+            ButtonIcon={PersonButton}
+            onClick={() => alert('email')}
+          />
+          <Info
+            text="Buggenhout, Belgium"
+            PreIcon={PersonSVG}
+            ButtonIcon={PersonButton}
+            onClick={() => alert('test')}
+          />
         </Item>
       </Container>
     )
   }
 }
+
+const PersonSVG = () => (
+  <svg
+    fill="#000000"
+    height="24"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+    <path d="M0 0h24v24H0z" fill="none" />
+  </svg>
+)
+
+const PersonButton = () => (
+  <svg
+    fill="#000000"
+    height="24"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+    <path d="M0 0h24v24H0z" fill="none" />
+  </svg>
+)
