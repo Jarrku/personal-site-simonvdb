@@ -14,6 +14,12 @@ const fadeIn = keyframes`
     opacity: 1;
   }
 `
+
+const Content = styled.div`
+  margin: 0 auto;
+  max-width: 800px;
+`
+
 const FadeInPage = styled.div`
   ${({ show }) => (show ? `animation: 1s ${fadeIn} ease-out` : `opacity: 0`)};
   height: 100vh;
@@ -35,6 +41,7 @@ const GreetingContainer = styled.div`
 const Greeting = styled.h1`
   color: rgba(0, 0, 255, 0.7);
   font-size: 50px;
+  font-weight: 500;
   margin: auto;
 
   ${media.small`
@@ -54,12 +61,14 @@ class Welcome extends React.Component {
 
   render() {
     return (
+      <Content>
       <FadeInPage show={this.state.show}>
         <GreetingContainer>
           <Greeting>Hello, I'm Simon</Greeting>
         </GreetingContainer>
         <ScrollButton />
       </FadeInPage>
+      </Content>
     )
   }
 }
