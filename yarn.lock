@@ -1328,7 +1328,7 @@ babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.25.0, babel-runtime@^6.26.0, babel-runtime@^6.6.1, babel-runtime@^6.9.2:
+babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0, babel-runtime@^6.6.1, babel-runtime@^6.9.2:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
@@ -2051,10 +2051,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
-
 cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
@@ -2707,7 +2703,7 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.0.0"
     whatwg-url "^6.4.0"
 
-date-fns@^1.27.2:
+date-fns@^1.27.2, date-fns@^1.29.0:
   version "1.29.0"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
 
@@ -6069,10 +6065,6 @@ jpeg-js@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.2.0.tgz#53e448ec9d263e683266467e9442d2c5a2ef5482"
 
-jquery@x.*:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
-
 js-base64@^2.1.9:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.3.tgz#2e545ec2b0f2957f41356510205214e98fad6582"
@@ -7323,6 +7315,10 @@ normalize-url@^1.4.0:
     prepend-http "^1.0.0"
     query-string "^4.1.0"
     sort-keys "^1.0.0"
+
+normalize.css@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.0.tgz#14ac5e461612538a4ce9be90a7da23f86e718493"
 
 npm-bundled@^1.0.1:
   version "1.0.3"
@@ -9559,22 +9555,6 @@ seek-bzip@^1.0.3:
   resolved "https://registry.yarnpkg.com/seek-bzip/-/seek-bzip-1.0.5.tgz#cfe917cb3d274bcffac792758af53173eb1fabdc"
   dependencies:
     commander "~2.8.1"
-
-semantic-ui-css@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/semantic-ui-css/-/semantic-ui-css-2.3.1.tgz#a5485c640c98cce29d8ddde3eff3434566a068e0"
-  dependencies:
-    jquery x.*
-
-semantic-ui-react@^0.79.1:
-  version "0.79.1"
-  resolved "https://registry.yarnpkg.com/semantic-ui-react/-/semantic-ui-react-0.79.1.tgz#80bd0ccfb3b3c1184a1b1b3f6067ab1225aed5f0"
-  dependencies:
-    babel-runtime "^6.25.0"
-    classnames "^2.2.5"
-    fbjs "^0.8.16"
-    lodash "^4.17.4"
-    prop-types "^15.5.10"
 
 semver-compare@^1.0.0:
   version "1.0.0"
