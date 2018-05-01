@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { helpers, media } from '../util/style-utils'
 import differenceInYears from 'date-fns/difference_in_years'
 import differenceInMonths from 'date-fns/difference_in_months'
-import { differenceInSeconds } from 'date-fns'
+import differenceInSeconds from 'date-fns/difference_in_seconds'
+import { helpers, media } from '../util/style-utils'
+import Info from './Info'
 
 const Container = styled.section`
   background-color: ${helpers.light};
@@ -26,7 +27,7 @@ const Item = styled.div`
   flex: 1 100%;
   padding: 20px;
 
-  ${media.small`
+  ${media.medium`
     flex: ${({ flex }) => flex};
   `};
 `
@@ -49,7 +50,7 @@ const P = styled.p`
 
   strong {
     font-weight: 500;
-  };
+  }
 
   ${media.small`
     line-height: 2.672rem;
@@ -106,6 +107,7 @@ export default class Intro extends React.Component {
         </Item>
         <Item flex={2}>
           <Title>Information</Title>
+          <Info />
           <P>Ives van Hoorne</P>
           <P>me@ivesvh.com</P>
           <P>Enschede, Netherlands</P>
