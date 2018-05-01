@@ -57,7 +57,7 @@ class ScrollButton extends React.Component {
     showButton: true,
   }
 
-  onClick = () => window.scrollBy({ top: 400, left: 0, behavior: 'smooth' });
+  onClick = () => document.querySelector('#intro-container').scrollIntoView({ behavior: 'smooth' });
 
   render() {
     return (
