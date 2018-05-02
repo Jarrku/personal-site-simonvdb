@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { media } from '../util/style-utils'
 import { withScroll } from 'react-fns'
-import ArrowDownSVG from '../svg/ArrowDown'
+import { ArrowDownSVG } from '../svg'
 
 const bounce = keyframes`
   0% { transform:translateY(0); }
