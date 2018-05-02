@@ -39,7 +39,7 @@ const GreetingContainer = styled.div`
 `
 
 const Greeting = styled.h1`
-  color: rgba(0, 0, 255, 0.7);
+  color: rgb(150, 135, 155);
   font-size: 50px;
   font-weight: 500;
   margin: auto;
