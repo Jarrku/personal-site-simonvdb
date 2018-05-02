@@ -5,7 +5,7 @@ import differenceInMonths from 'date-fns/difference_in_months'
 import differenceInSeconds from 'date-fns/difference_in_seconds'
 import { helpers, media } from '../util/style-utils'
 import Info from './Info'
-import { PersonSVG, MailSVG } from '../svg'
+import { PersonSVG, MailSVG, SendSVG, LocationPinSVG, MapSVG } from '../svg'
 
 const Container = styled.section`
   background-color: ${helpers.light};
@@ -37,7 +37,7 @@ const Title = styled.h2`
   font-weight: 300;
   padding: 0;
   margin: 1rem 0;
-  color: rgba(0, 0, 255, 0.7);
+  color: rgb(150, 135, 155);
   font-size: 34px;
 
   ${media.medium`
@@ -112,19 +112,20 @@ export default class Intro extends React.Component {
             text="Simon Van den Broeck"
             PreIcon={PersonSVG}
             ButtonIcon={PersonSVG}
-            onClick={() => alert('test')}
           />
           <Info
             text="simonvdbroeck@gmail.com"
             PreIcon={MailSVG}
-            ButtonIcon={MailSVG}
-            onClick={() => alert('email')}
+            ButtonIcon={SendSVG}
+            onClick="mailto:simonvdbroeck@gmail.com"
           />
           <Info
             text="Buggenhout, Belgium"
-            PreIcon={PersonSVG}
-            ButtonIcon={PersonSVG}
-            onClick={() => alert('test')}
+            PreIcon={LocationPinSVG}
+            ButtonIcon={MapSVG}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick="https://www.google.com/maps/place/9255+Buggenhout/@51.0127098,4.1626156,13z/data=!3m1!4b1!4m5!3m4!1s0x47c3949939888d37:0x332fcf1f7f86382c!8m2!3d51.0136764!4d4.2011261"
           />
         </Item>
       </Container>
