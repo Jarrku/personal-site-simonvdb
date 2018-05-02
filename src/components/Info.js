@@ -41,28 +41,46 @@ const Span = styled.span`
 `
 
 const Button = styled.button`
-  background-color: rgb(138, 138, 138);
-  color: rgb(229, 229, 229);
+  background-color: rgb(150, 135, 155);
   border-radius: 2px;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
+
+  transition: all .4s ease;
+  &:hover {
+    background-color: rgb(131, 117, 135);
+  }
 `
+
+const A = Button.withComponent('a')
+
+const Clickable = ({ children, onClick, ...other }) =>
+  onClick instanceof Function ? (
+    <Button onClick={onClick} {...other}>
+      {children}
+    </Button>
+  ) : (
+    <A href={onClick} {...other}>
+      {children}
+    </A>
+  )
+
 
 export default class Info extends React.Component {
   render() {
-    const { text, PreIcon, ButtonIcon, onClick } = this.props
+    const { text, PreIcon, ButtonIcon, onClick, ...props } = this.props
     return (
       <Container>
         <Icon>
-          <PreIcon />
+          <PreIcon style={{fill: "rgb(150, 135, 155)" }}/>
         </Icon>
         <Span>{text}</Span>
-        <Button onClick={onClick}>
-          <ButtonIcon />
-        </Button>
+        <Clickable onClick={onClick} {...props}>
+          <ButtonIcon style={{fill: "rgb(232, 229, 233)" }}/>
+        </Clickable>
       </Container>
     )
   }
