@@ -1,3 +1,6 @@
 export { default as ArrowDownSVG } from './ArrowDown'
 export { default as MailSVG } from './Mail'
 export { default as PersonSVG } from './Person'
+export { default as SendSVG } from './Send'
+export { default as LocationPinSVG } from './LocationPin'
+export { default as MapSVG } from './Map'
