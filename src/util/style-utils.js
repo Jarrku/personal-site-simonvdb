@@ -4,22 +4,27 @@ import { css } from 'styled-components'
 export const media = {
   small: (...args) => css`
     @media (min-width: 576px) {
-      ${css(...args)}
+      ${css(...args)};
     }
   `,
   medium: (...args) => css`
     @media (min-width: 768px) {
-      ${css(...args)}
+      ${css(...args)};
     }
   `,
   large: (...args) => css`
     @media (min-width: 992px) {
-      ${css(...args)}
+      ${css(...args)};
     }
   `,
   xlarge: (...args) => css`
     @media (min-width: 1200px) {
-      ${css(...args)}
+      ${css(...args)};
+    }
+  `,
+  xxlarge: (...args) => css`
+    @media (min-width: 1400px) {
+      ${css(...args)};
     }
   `,
 }
@@ -29,4 +34,4 @@ export const helpers = {
   dark: 'rgba(38, 101, 114, 0.75)',
   skills: 'background-color: rgba(0,0,0,.15)',
   title: 'rgb(13, 76, 89)',
-};
+}
