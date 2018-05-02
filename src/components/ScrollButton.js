@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { media } from '../util/style-utils'
 import { withScroll } from 'react-fns'
+import ArrowDownSVG from '../svg/ArrowDown'
 
 const bounce = keyframes`
   0% { transform:translateY(0); }
@@ -57,21 +58,19 @@ class ScrollButton extends React.Component {
     showButton: true,
   }
 
-  onClick = () => document.querySelector('#intro-container').scrollIntoView({ behavior: 'smooth' });
+  onClick = () =>
+    document
+      .querySelector('#intro-container')
+      .scrollIntoView({ behavior: 'smooth' })
 
   render() {
     return (
-      <RoundButton {...this.props} showButton={this.state.showButton} onClick={this.onClick}>
-        <svg
-          fill="rgba(0,0,255,0.7)"
-          height="48"
-          width="48"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
-          <path d="M0-.75h24v24H0z" fill="none" />
-        </svg>
+      <RoundButton
+        {...this.props}
+        showButton={this.state.showButton}
+        onClick={this.onClick}
+      >
+        <ArrowDownSVG fill="rgba(0,0,255,0.7)" height="48" width="48" />
       </RoundButton>
     )
   }
