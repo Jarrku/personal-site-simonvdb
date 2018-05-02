@@ -28,14 +28,14 @@ const Span = styled.span`
   font-size: 14px;
 
   ${media.small`
-  font-size: 16px
+  font-size: 20px
 `};
 
   ${media.medium`
     font-size: 18px
   `};
 
-  ${media.xlarge`
+  ${media.xxlarge`
     font-size: 20px
   `};
 `
