@@ -70,7 +70,7 @@ class ScrollButton extends React.Component {
         showButton={this.state.showButton}
         onClick={this.onClick}
       >
-        <ArrowDownSVG fill="rgba(0,0,255,0.7)" height="48" width="48" />
+        <ArrowDownSVG fill="rgb(150, 135, 155)" height="48" width="48" />
       </RoundButton>
     )
   }
