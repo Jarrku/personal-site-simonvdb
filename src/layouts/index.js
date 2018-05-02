@@ -28,8 +28,7 @@ class Layout extends React.Component {
   }
 
   componentDidMount() {
-    runPolyfills();
-    console.log('running polyfills');
+    runPolyfills()
   }
 
   render() {
