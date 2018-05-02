@@ -5,7 +5,7 @@ import differenceInMonths from 'date-fns/difference_in_months'
 import differenceInSeconds from 'date-fns/difference_in_seconds'
 import { helpers, media } from '../util/style-utils'
 import Info from './Info'
-import PersonSVG from '../svg/Person'
+import { PersonSVG, MailSVG } from '../svg'
 
 const Container = styled.section`
   background-color: ${helpers.light};
@@ -14,22 +14,22 @@ const Container = styled.section`
   display: flex;
   flex-flow: row wrap;
 
-  ${media.large`
-  padding-left: 10%;
-  padding-right: 10%;
-`};
-  ${media.xlarge`
-    padding-left: 15%;
-    padding-right: 15%;
+  ${media.xxlarge`
+    padding-left: 12%;
+    padding-right: 12%;
   `};
 `
 
 const Item = styled.div`
   flex: 1 100%;
-  padding: 20px;
+  padding: 10px;
 
   ${media.medium`
-    flex: ${({ flex }) => flex};
+    flex: ${({ mediumFlex }) => mediumFlex};
+  `};
+
+  ${media.large`
+    flex: ${({ largeFlex }) => largeFlex}
   `};
 `
 
@@ -93,7 +93,7 @@ export default class Intro extends React.Component {
 
     return (
       <Container id="intro-container">
-        <Item flex={3}>
+        <Item mediumFlex={5} largeFlex={3}>
           <Title>Who am I?</Title>
           <P>
             My name is <strong>Simon Van den Broeck</strong>. I'm{' '}
@@ -106,7 +106,7 @@ export default class Intro extends React.Component {
             become the lead of one in the future.
           </P>
         </Item>
-        <Item flex={2}>
+        <Item mediumFlex={6} largeFlex={2}>
           <Title>Information</Title>
           <Info
             text="Simon Van den Broeck"
@@ -116,8 +116,8 @@ export default class Intro extends React.Component {
           />
           <Info
             text="simonvdbroeck@gmail.com"
-            PreIcon={PersonSVG}
-            ButtonIcon={PersonSVG}
+            PreIcon={MailSVG}
+            ButtonIcon={MailSVG}
             onClick={() => alert('email')}
           />
           <Info
