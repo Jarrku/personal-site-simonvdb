@@ -16,6 +16,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Simon Van den Broeck",
+        short_name: "Simon VDB",
+      },
+    },
+    // In your gatsby-config.js
     // This plugin generates a service worker and AppShell
     // html file so the site works offline and is otherwise
     // resistant to bad networks. Works with almost any
