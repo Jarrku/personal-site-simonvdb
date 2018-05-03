@@ -117,6 +117,7 @@ export default class Intro extends React.Component {
             text="simonvdbroeck@gmail.com"
             PreIcon={MailSVG}
             ButtonIcon={SendSVG}
+            aria-label="Click to mail me!"
             onClick="mailto:simonvdbroeck@gmail.com"
           />
           <Info
@@ -125,6 +126,7 @@ export default class Intro extends React.Component {
             ButtonIcon={MapSVG}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Google Maps Home Location"
             onClick="https://www.google.com/maps/place/9255+Buggenhout/@51.0127098,4.1626156,13z/data=!3m1!4b1!4m5!3m4!1s0x47c3949939888d37:0x332fcf1f7f86382c!8m2!3d51.0136764!4d4.2011261"
           />
         </Item>
