@@ -21,7 +21,7 @@
     "gatsby": "^1.9.256",
     "gatsby-image": "^1.0.48",
     "gatsby-link": "^1.6.41",
-    "graphql": "^0.11.7",
+    "graphql": "0.11.7",
     "normalize.css": "^8.0.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
