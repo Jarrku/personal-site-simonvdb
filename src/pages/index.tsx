@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import * as React from 'react'
 import Welcome from '../components/Welcome'
 import Intro from '../components/Intro'
 import Skills from '../components/Skills';
@@ -7,11 +7,11 @@ import Skills from '../components/Skills';
 class IndexPage extends React.Component {
   render() {
     return (
-      <Fragment>
+      <React.Fragment>
         <Welcome />
         <Intro />
         <Skills />
-      </Fragment>
+      </React.Fragment>
     )
   }
 }

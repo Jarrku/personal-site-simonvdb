@@ -9,11 +9,12 @@
     "target": "esnext",
     "jsx": "react",
     "lib": [
-      "dom","esnext"
+      "dom","esnext",
     ]
   },
   "include": [
-    "./src/**/*"
+    "./src/**/*",
+    "./custom.d.ts"
   ]
 }
 

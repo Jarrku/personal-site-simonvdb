@@ -1,12 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import * as React from 'react'
 import Helmet from 'react-helmet'
 import styled, { injectGlobal } from 'styled-components'
 
 import runPolyfills from '../util/polyfills'
 
 import Header from '../components/header'
-import background from './trianglify2.svg'
+
+const background = require("./trianglify2.svg") as string;
+// import background from './trianglify2.svg'
 
 import 'normalize.css'
 
@@ -23,9 +24,6 @@ const Body = styled.div`
 `
 
 class Layout extends React.Component {
-  static propTypes = {
-    children: PropTypes.func,
-  }
 
   componentDidMount() {
     runPolyfills()

@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { media } from '../util/style-utils'
 import { withScroll } from 'react-fns'
