@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
 import styled, { keyframes } from 'styled-components'
 import { media } from '../util/style-utils'
 
@@ -62,12 +61,12 @@ class Welcome extends React.Component {
   render() {
     return (
       <Content>
-      <FadeInPage show={this.state.show}>
-        <GreetingContainer>
-          <Greeting>Hello, I'm Simon</Greeting>
-        </GreetingContainer>
-        <ScrollButton />
-      </FadeInPage>
+        <FadeInPage show={this.state.show}>
+          <GreetingContainer>
+            <Greeting>Hello, I'm Simon</Greeting>
+          </GreetingContainer>
+          <ScrollButton />
+        </FadeInPage>
       </Content>
     )
   }
