@@ -46,7 +46,7 @@ const RoundButton = styled.div`
 `
 
 class ScrollButton extends React.Component {
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate() {
     if (this.props.y === 0 && !this.state.showButton) {
       this.setState({ showButton: true })
     } else if (this.props.y !== 0 && this.state.showButton) {
