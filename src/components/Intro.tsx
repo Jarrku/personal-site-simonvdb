@@ -112,6 +112,10 @@ export default class Intro extends React.Component {
             text="Simon Van den Broeck"
             PreIcon={PersonSVG}
             ButtonIcon={PersonSVG}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+            onClick="https://www.linkedin.com/in/simon-van-den-broeck/"
           />
           <Info
             text="simonvdbroeck@gmail.com"
