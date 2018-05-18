@@ -1,8 +1,7 @@
-// style-utils.js
 import { css } from 'styled-components'
 
 export const media = {
-  small: (...args) => css`
+  small: (...args: any[]) => css`
     @media (min-width: 576px) {
       ${css(...args)};
     }
@@ -12,17 +11,17 @@ export const media = {
       ${css(...args)};
     }
   `,
-  large: (...args) => css`
+  large: (...args: any[]) => css`
     @media (min-width: 992px) {
       ${css(...args)};
     }
   `,
-  xlarge: (...args) => css`
+  xlarge: (...args: any[]) => css`
     @media (min-width: 1200px) {
       ${css(...args)};
     }
   `,
-  xxlarge: (...args) => css`
+  xxlarge: (...args: any[]) => css`
     @media (min-width: 1400px) {
       ${css(...args)};
     }

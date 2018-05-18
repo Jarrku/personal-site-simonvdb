@@ -1,6 +1,7 @@
 import * as React from 'react'
+import { Props } from './SVGProps';
 
-const SendSVG = props => (
+const SendSVG = (props: Props) => (
   <svg
     fill="#000000"
     height="24"
@@ -14,4 +15,4 @@ const SendSVG = props => (
   </svg>
 )
 
-export default SendSVG;
+export default SendSVG

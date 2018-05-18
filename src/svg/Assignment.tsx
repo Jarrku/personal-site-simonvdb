@@ -1,6 +1,7 @@
 import * as React from 'react'
+import { Props } from './SVGProps';
 
-const AssignmentSVG = props => (
+const AssignmentSVG = (props: Props) => (
   <svg
     fill="#000000"
     height="24"

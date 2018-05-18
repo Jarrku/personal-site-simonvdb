@@ -1,6 +1,8 @@
 import * as React from 'react'
+import { Props } from './SVGProps';
 
-const HomeSVG = props => (
+
+const HomeSVG = (props: Props) => (
   <svg
     fill="#000000"
     height="24"
