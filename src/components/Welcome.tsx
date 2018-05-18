@@ -47,7 +47,9 @@ const Greeting = styled.h1`
   font-size: 64px;`};
 `
 
-class Welcome extends React.Component {
+export interface State { show: boolean; };
+
+export default class Welcome extends React.Component<{}, State> {
   state = {
     show: false,
   }
@@ -71,5 +73,3 @@ class Welcome extends React.Component {
     )
   }
 }
-
-export default Welcome

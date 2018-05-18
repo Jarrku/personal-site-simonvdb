@@ -42,7 +42,7 @@ class Layout extends React.Component {
             },
           ]}
         />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header />
         {children()}
       </Body>
     )
