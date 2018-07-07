@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { media } from '../util/style-utils'
-import { withScroll } from 'react-fns'
+import { withScroll, ScrollProps } from 'react-fns'
 import { ArrowDownSVG } from '../svg'
 
 const bounce = keyframes`
@@ -14,8 +14,14 @@ const hide = keyframes`
   0% { transform:scale(1,1); }
   100% { transform:scale(0, 0); }
 `
+interface ButtonProps {
+  showButton: boolean
+}
 
-const RoundButton = styled.div`
+const RoundButton =
+  styled.div <
+  ButtonProps >
+  `
   ${({ showButton }) =>
     showButton
       ? `animation: ${bounce} 2.5s infinite`
@@ -45,7 +51,12 @@ const RoundButton = styled.div`
   `};
 `
 
-class ScrollButton extends React.Component {
+interface Props {}
+
+interface State {
+  showButton: boolean
+}
+class ScrollButton extends React.Component<Props & ScrollProps, State> {
   componentDidUpdate() {
     if (this.props.y === 0 && !this.state.showButton) {
       this.setState({ showButton: true })
@@ -76,4 +87,4 @@ class ScrollButton extends React.Component {
   }
 }
 
-export default withScroll(ScrollButton)
+export default withScroll<Props>(ScrollButton)

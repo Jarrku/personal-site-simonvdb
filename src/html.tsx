@@ -1,6 +1,6 @@
-import * as React from "react"
+import * as React from 'react'
 
-let stylesStr
+let stylesStr: string
 if (process.env.NODE_ENV === `production`) {
   try {
     stylesStr = require(`!raw-loader!../public/styles.css`)

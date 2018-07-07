@@ -1,31 +1,13 @@
 import * as React from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { media } from '../util/style-utils'
 
-import ScrollButton from './ScrollButton'
-
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-`
+import FadeInPage from '../components/FadeInPage'
+import ScrollButton from '../components/ScrollButton'
 
 const Content = styled.div`
   margin: 0 auto;
   max-width: 800px;
-`
-
-const FadeInPage = styled.div`
-  ${({ show }) => (show ? `animation: 1s ${fadeIn} ease-out` : `opacity: 0`)};
-  height: 100vh;
-  padding-top: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `
 
 const GreetingContainer = styled.div`
@@ -47,7 +29,9 @@ const Greeting = styled.h1`
   font-size: 64px;`};
 `
 
-export interface State { show: boolean; };
+export interface State {
+  show: boolean
+}
 
 export default class Welcome extends React.Component<{}, State> {
   state = {

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { helpers, media } from '../util/style-utils'
+import { media } from '../util/style-utils'
 
 const Container = styled.div`
   display: flex;
@@ -49,7 +49,7 @@ const Button = styled.button`
   align-items: center;
   padding: 0;
 
-  transition: all .4s ease;
+  transition: all 0.4s ease;
   &:hover {
     background-color: rgb(131, 117, 135);
   }
@@ -57,7 +57,18 @@ const Button = styled.button`
 
 const A = Button.withComponent('a')
 
-const Clickable = ({ children, onClick, ...other }) =>
+type ClickEventHandler = (
+  event:
+    | React.MouseEvent<HTMLAnchorElement>
+    | React.MouseEvent<HTMLButtonElement>
+) => void
+
+interface ClickableProps {
+  children: React.ReactNode
+  onClick: ClickEventHandler | string
+}
+
+const Clickable = ({ children, onClick, ...other }: ClickableProps) =>
   onClick instanceof Function ? (
     <Button onClick={onClick} {...other}>
       {children}
@@ -68,18 +79,27 @@ const Clickable = ({ children, onClick, ...other }) =>
     </A>
   )
 
+interface Props {
+  text: string
+  PreIcon: (props: any) => React.ReactElement<any>
+  ButtonIcon: (props: any) => React.ReactElement<any>
+  target?: string
+  rel?: string
+  'aria-label'?: string
+  onClick: string | ClickEventHandler
+}
 
-export default class Info extends React.Component {
+export default class Info extends React.Component<Props> {
   render() {
     const { text, PreIcon, ButtonIcon, onClick, ...props } = this.props
     return (
       <Container>
         <Icon>
-          <PreIcon style={{fill: "rgb(150, 135, 155)" }}/>
+          <PreIcon style={{ fill: 'rgb(150, 135, 155)' }} />
         </Icon>
         <Span>{text}</Span>
         <Clickable onClick={onClick} {...props}>
-          <ButtonIcon style={{fill: "rgb(232, 229, 233)" }}/>
+          <ButtonIcon style={{ fill: 'rgb(232, 229, 233)' }} />
         </Clickable>
       </Container>
     )

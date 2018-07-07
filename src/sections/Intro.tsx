@@ -1,8 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import * as differenceInYears from 'date-fns/difference_in_years'
-import * as differenceInMonths from 'date-fns/difference_in_months'
-import * as differenceInSeconds from 'date-fns/difference_in_seconds'
+import * as differenceInMonths from 'date-fns'
 import { helpers, media } from '../util/style-utils'
 import Info from './Info'
 import { PersonSVG, MailSVG, SendSVG, LocationPinSVG, MapSVG } from '../svg'
@@ -20,7 +18,15 @@ const Container = styled.section`
   `};
 `
 
-const Item = styled.div`
+interface ItemProps {
+  mediumFlex: number
+  largeFlex: number
+}
+
+const Item =
+  styled.div <
+  ItemProps >
+  `
   flex: 1 100%;
   padding: 10px;
 
@@ -29,7 +35,7 @@ const Item = styled.div`
   `};
 
   ${media.large`
-    flex: ${({ largeFlex }) => largeFlex}
+    flex: ${({ largeFlex }) => largeFlex};
   `};
 `
 
@@ -69,17 +75,21 @@ const P = styled.p`
   `};
 `
 
-export default class Intro extends React.Component {
+interface State {
+  years?: number
+  months?: number
+}
+
+export default class Intro extends React.Component<{}, State> {
   state = {
-    years: null,
-    months: null,
+    years: undefined,
+    months: undefined,
   }
 
   componentDidMount() {
     const initialDate = new Date(1994, 7, 5)
     const currentDate = new Date()
 
-    // const years = differenceInYears(currentDate, initialDate);
     const totalMonths = differenceInMonths(currentDate, initialDate)
 
     const years = Math.floor(totalMonths / 12)
@@ -89,7 +99,7 @@ export default class Intro extends React.Component {
   }
 
   render() {
-    const { years, months, seconds } = this.state
+    const { years, months } = this.state
 
     return (
       <Container id="intro-container">

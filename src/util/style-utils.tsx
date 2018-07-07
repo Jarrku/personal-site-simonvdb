@@ -1,29 +1,29 @@
 import { css } from 'styled-components'
 
 export const media = {
-  small: (...args: any[]) => css`
+  small: (str: any, ...args: any[]) => css`
     @media (min-width: 576px) {
-      ${css(...args)};
+      ${css(str, args)};
     }
   `,
-  medium: (...args) => css`
+  medium: (str: any, ...args: any[]) => css`
     @media (min-width: 768px) {
-      ${css(...args)};
+      ${css(str, args)};
     }
   `,
-  large: (...args: any[]) => css`
+  large: (str: any, ...args: any[]) => css`
     @media (min-width: 992px) {
-      ${css(...args)};
+      ${css(str, args)};
     }
   `,
-  xlarge: (...args: any[]) => css`
+  xlarge: (str: any, ...args: any[]) => css`
     @media (min-width: 1200px) {
-      ${css(...args)};
+      ${css(str, args)};
     }
   `,
-  xxlarge: (...args: any[]) => css`
+  xxlarge: (str: any, ...args: any[]) => css`
     @media (min-width: 1400px) {
-      ${css(...args)};
+      ${css(str, args)};
     }
   `,
 }

@@ -79,7 +79,17 @@ const Skill = styled.div`
   font-weight: 300;
 `
 
-const skills = [
+interface Submenu {
+  subtitle: string
+  items: Array<string>
+}
+
+interface Skill {
+  title: string
+  submenus: Array<Submenu>
+}
+
+const skills: Array<Skill> = [
   {
     title: 'Coding Skills',
     submenus: [
@@ -124,7 +134,7 @@ const skills = [
   },
 ]
 
-const SkillSection = ({ title, submenus }) => (
+const SkillSection = ({ title, submenus }: Skill) => (
   <Experience>
     <Header>{title}</Header>
     {submenus.map(({ subtitle, items }) => (
@@ -136,7 +146,13 @@ const SkillSection = ({ title, submenus }) => (
   </Experience>
 )
 
-const languages = [
+interface Language {
+  title: string
+  description: string
+  level: number
+}
+
+const languages: Array<Language> = [
   {
     title: 'Dutch',
     description: 'Nederlands is mijn moedertaal.',
@@ -157,8 +173,7 @@ const languages = [
 const LanguageDescription = styled.span`
   ${media.medium`
     flex: 1 0 45%;
-  `}
-  flex: 1 0 100%;
+  `} flex: 1 0 100%;
   text-align: left;
   font-size: 25px;
   font-weight: 100;
@@ -170,14 +185,20 @@ const LanguageDescription = styled.span`
 const ProgressBar = styled.div`
   ${media.medium`
     flex: 1 0 45%;
-  `}
-  flex: 1 0 100%;
+  `} flex: 1 0 100%;
   margin-bottom: 1.5rem;
-  background-color: rgba(0,0,0,.15);
+  background-color: rgba(0, 0, 0, 0.15);
   display: flex;
 `
 
-const FilledProgress = styled.div`
+interface FilledProgressProps {
+  width: number
+}
+
+const FilledProgress =
+  styled.div <
+  FilledProgressProps >
+  `
   flex: 0 0 ${({ width }) => width}%;
   background-color: rgba(0,0,0,.15);
   padding-top: 3px;
@@ -196,7 +217,7 @@ const LanguageTitle = styled.span`
   padding: 1.5rem 0 1.5rem 1.5rem;
 `
 
-const Language = ({ title, description, level }) => (
+const Language = ({ title, description, level }: Language) => (
   <SkillsContainer key={title}>
     <LanguageTitle>{title}</LanguageTitle>
     <LanguageDescription>{description}</LanguageDescription>
@@ -216,12 +237,13 @@ const LanguageSection = () => (
 export default class Skills extends React.Component {
   render() {
     return (
-      <Container >
+      <Container>
         <Title>Skills</Title>
         <Paragraph id="skills">
           I love development and design. I'm most comfortable with front-end
-          technologies like React and Redux, but I'm also confortable in back-end technologies like NodeJS and GraphQL. I'm a big fan of functional
-          programming.
+          technologies like React and Redux, but I'm also confortable in
+          back-end technologies like NodeJS and GraphQL. I'm a big fan of
+          functional programming.
         </Paragraph>
         {skills.map(skill => <SkillSection key={skill.title} {...skill} />)}
         <LanguageSection />
