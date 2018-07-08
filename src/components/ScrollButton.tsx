@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled, { keyframes } from 'styled-components'
-import { media } from '../util/style-utils'
 import { withScroll, ScrollProps } from 'react-fns'
+import { media } from '../util/style-utils'
 import { ArrowDownSVG } from '../svg'
 
 const bounce = keyframes`
@@ -18,10 +18,7 @@ interface ButtonProps {
   showButton: boolean
 }
 
-const RoundButton =
-  styled.div <
-  ButtonProps >
-  `
+const RoundButton = styled.div<ButtonProps>`
   ${({ showButton }) =>
     showButton
       ? `animation: ${bounce} 2.5s infinite`
