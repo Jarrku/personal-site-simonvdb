@@ -1,9 +1,18 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { differenceInMonths } from 'date-fns'
+
 import { helpers, media } from '../util/style-utils'
+
+import {
+  PersonSVG,
+  MailSVG,
+  SendSVG,
+  LocationPinSVG,
+  MapSVG,
+  GitHubSVG,
+} from '../svg'
 import Info from './Info'
-import { PersonSVG, MailSVG, SendSVG, LocationPinSVG, MapSVG } from '../svg'
 
 const Container = styled.section`
   background-color: ${helpers.light};
@@ -139,6 +148,15 @@ export default class Intro extends React.Component<{}, State> {
             rel="noopener noreferrer"
             aria-label="Google Maps Home Location"
             onClick="https://www.google.com/maps/place/9255+Buggenhout/@51.0127098,4.1626156,13z/data=!3m1!4b1!4m5!3m4!1s0x47c3949939888d37:0x332fcf1f7f86382c!8m2!3d51.0136764!4d4.2011261"
+          />
+          <Info
+            text="Jarrku"
+            PreIcon={GitHubSVG}
+            ButtonIcon={GitHubSVG}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Google Maps Home Location"
+            onClick="https://github.com/jarrku"
           />
         </Item>
       </Container>
