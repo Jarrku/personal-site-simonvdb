@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import * as differenceInMonths from 'date-fns'
+import { differenceInMonths } from 'date-fns'
 import { helpers, media } from '../util/style-utils'
 import Info from './Info'
 import { PersonSVG, MailSVG, SendSVG, LocationPinSVG, MapSVG } from '../svg'
@@ -23,10 +23,7 @@ interface ItemProps {
   largeFlex: number
 }
 
-const Item =
-  styled.div <
-  ItemProps >
-  `
+const Item = styled.div<ItemProps>`
   flex: 1 100%;
   padding: 10px;
 
