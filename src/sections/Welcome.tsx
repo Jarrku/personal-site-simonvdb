@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+
 import { media } from '../util/style-utils'
 
 import FadeInPage from '../components/FadeInPage'
@@ -17,6 +18,7 @@ const GreetingContainer = styled.div`
   align-items: center;
   height: 125px;
   width: 100%;
+  margin-bottom: 10vh;
 `
 
 const Greeting = styled.h1`
