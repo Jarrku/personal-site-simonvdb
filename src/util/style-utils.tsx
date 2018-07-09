@@ -1,29 +1,36 @@
-import { css } from 'styled-components'
+import { css, SimpleInterpolation, InterpolationValue } from 'styled-components'
 
-export const media = {
-  small: (str: any, ...args: any[]) => css`
+interface MediaSelector {
+  [x: string]: (
+    str: any,
+    ...args: SimpleInterpolation[]
+  ) => InterpolationValue[]
+}
+
+export const media: MediaSelector = {
+  small: (str, ...args) => css`
     @media (min-width: 576px) {
-      ${css(str, args)};
+      ${css(str, ...args)};
     }
   `,
-  medium: (str: any, ...args: any[]) => css`
+  medium: (str, ...args) => css`
     @media (min-width: 768px) {
-      ${css(str, args)};
+      ${css(str, ...args)};
     }
   `,
-  large: (str: any, ...args: any[]) => css`
+  large: (str, ...args) => css`
     @media (min-width: 992px) {
-      ${css(str, args)};
+      ${css(str, ...args)};
     }
   `,
-  xlarge: (str: any, ...args: any[]) => css`
+  xlarge: (str, ...args) => css`
     @media (min-width: 1200px) {
-      ${css(str, args)};
+      ${css(str, ...args)};
     }
   `,
-  xxlarge: (str: any, ...args: any[]) => css`
+  xxlarge: (str, ...args) => css`
     @media (min-width: 1400px) {
-      ${css(str, args)};
+      ${css(str, ...args)};
     }
   `,
 }
