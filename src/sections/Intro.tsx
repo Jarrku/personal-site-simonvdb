@@ -37,11 +37,11 @@ const Item = styled.div<ItemProps>`
   padding: 10px;
 
   ${media.medium`
-    flex: ${({ mediumFlex }) => mediumFlex};
+    flex: ${({ mediumFlex }: ItemProps) => mediumFlex};
   `};
 
   ${media.large`
-    flex: ${({ largeFlex }) => largeFlex};
+    flex: ${({ largeFlex }: ItemProps) => largeFlex};
   `};
 `
 
@@ -82,14 +82,14 @@ const P = styled.p`
 `
 
 interface State {
-  years?: number
-  months?: number
+  years: number
+  months: number
 }
 
 export default class Intro extends React.Component<{}, State> {
   state = {
-    years: undefined,
-    months: undefined,
+    years: 0,
+    months: 0,
   }
 
   componentDidMount() {
