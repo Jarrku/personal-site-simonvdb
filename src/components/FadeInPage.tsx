@@ -17,7 +17,6 @@ interface FadeInPageProps {
 const FadeInPage = styled.div<FadeInPageProps>`
   ${({ show }) => (show ? `animation: .5s ${fadeIn} ease-out` : `opacity: 0`)};
   height: 100vh;
-  padding-top: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
