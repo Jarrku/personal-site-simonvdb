@@ -95,8 +95,8 @@ export default class Skills extends React.Component {
   render() {
     return (
       <Container>
-        <Title>Skills</Title>
-        <Paragraph id="skills">
+        <Title id="skills">Skills</Title>
+        <Paragraph>
           I love development and design. I'm most comfortable with front-end
           technologies like React and Redux, but I'm also comfortable in
           back-end technologies like NodeJS and GraphQL. I'm a big fan of

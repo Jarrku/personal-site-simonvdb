@@ -22,10 +22,9 @@ const Title = styled.button`
 `
 
 const Icon = styled.div`
-  padding: 5px;
-  margin: 5px 0;
+  padding: 7px;
   :hover {
-    background-color: grey;
+    background-color: rgb(98, 161, 174);
   }
 `
 const goTo = (id: string) => {

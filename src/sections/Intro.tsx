@@ -106,10 +106,10 @@ export default class Intro extends React.Component<{}, State> {
     const { years, months } = this.state
 
     return (
-      <Container id="intro-container">
+      <Container>
         <Item mediumFlex={5} largeFlex={3}>
           <Title>Who am I?</Title>
-          <P>
+          <P id="intro-container">
             My name is <strong>Simon Van den Broeck</strong>. I'm{' '}
             <strong>
               {years} years and {months} months{' '}
