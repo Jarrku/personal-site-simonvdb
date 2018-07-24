@@ -5,7 +5,6 @@ import Experience from './Experience'
 import ContentContainer from './ContentContainer'
 
 const SkillTitle = styled.h3`
-  border: none;
   text-align: left;
   font-size: 25px;
   font-weight: 100;

@@ -15,19 +15,25 @@ const LanguageTitle = styled.span`
   font-weight: 300;
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
-  padding: 1.5rem 0 1.5rem 1.5rem;
+  padding: 1.5rem 0 1.5rem 0rem;
+
+  ${media.medium`
+  padding-left: 1.5rem;
+`};
 `
 
 const LanguageDescription = styled.span`
-  ${media.medium`
-    flex: 1 0 45%;
-  `} flex: 1 0 100%;
+  flex: 1 0 100%;
   text-align: left;
   font-size: 25px;
   font-weight: 100;
   color: rgba(255, 255, 255, 0.8);
-  padding-left: 1.5rem;
   padding-bottom: 1.5rem;
+
+  ${media.medium`
+  flex: 1 0 45%;
+  padding-left: 1.5rem;
+`};
 `
 
 export interface Language {

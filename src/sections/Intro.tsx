@@ -16,7 +16,6 @@ import Info from './Info'
 
 const Container = styled.section`
   background-color: ${helpers.light};
-  margin-bottom: 0;
   padding: 60px 5%;
   display: flex;
   flex-flow: row wrap;
@@ -47,7 +46,6 @@ const Item = styled.div<ItemProps>`
 
 const Title = styled.h2`
   font-weight: 300;
-  padding: 0;
   margin: 1rem 0;
   color: rgb(150, 135, 155);
   font-size: 34px;

@@ -28,14 +28,16 @@ const Title = styled.h1`
 `
 
 const Paragraph = styled.p`
-  ${media.medium`
-    text-align: center;
-  `} line-height: 2.5rem;
+  line-height: 2.5rem;
   font-size: 1.584rem;
-  padding: 0 10%;
   color: #fff;
   font-weight: 100;
   margin: 0;
+
+  ${media.medium`
+  text-align: center;
+  padding: 0 10%;
+`};
 `
 
 const skills: Array<Skill> = [
