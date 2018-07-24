@@ -28,10 +28,9 @@ const RoundButton = styled.div<ButtonProps>`
   height: 70px;
   width: 70px;
   position: absolute;
-  top: 80vh;
+  top: 70vh;
   border: 7px solid #fff;
   border-radius: 50%;
-  margin: 0 auto;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -45,6 +44,7 @@ const RoundButton = styled.div<ButtonProps>`
   ${media.small`
     height: 105px;
     width: 105px;
+    top: 80vh;
   `};
 `
 
@@ -55,11 +55,16 @@ interface State {
 }
 class ScrollButton extends React.Component<Props & ScrollProps, State> {
   componentDidUpdate() {
-    if (this.props.y === 0 && !this.state.showButton) {
-      this.setState({ showButton: true })
-    } else if (this.props.y !== 0 && this.state.showButton) {
-      this.setState({ showButton: false })
-    }
+    this.setState(prevState => {
+      if (this.props.y === 0 && !prevState.showButton) {
+        return { showButton: true }
+      }
+
+      if (this.props.y !== 0 && prevState.showButton) {
+        return { showButton: false }
+      }
+      return null
+    })
   }
 
   state = {
