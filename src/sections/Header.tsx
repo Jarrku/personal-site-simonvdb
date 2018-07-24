@@ -35,20 +35,18 @@ const goToWelcome = () => window.scroll({ top: 0, left: 0, behavior: 'smooth' })
 const goToSkills = () => goTo('#skills')
 const goToIntro = () => goTo('#intro-container')
 
-export default class Header extends React.Component {
-  render() {
-    return (
-      <StyledHeader>
-        <Icon onClick={goToWelcome}>
-          <HomeSVG width={36} height={36} />
-        </Icon>
-        <Icon onClick={goToIntro}>
-          <AccountCircleSVG width={36} height={36} />
-        </Icon>
-        <Icon onClick={goToSkills}>
-          <AssignmentSVG width={36} height={36} />
-        </Icon>
-      </StyledHeader>
-    )
-  }
+export default function Header() {
+  return (
+    <StyledHeader>
+      <Icon onClick={goToWelcome}>
+        <HomeSVG width={36} height={36} />
+      </Icon>
+      <Icon onClick={goToIntro}>
+        <AccountCircleSVG width={36} height={36} />
+      </Icon>
+      <Icon onClick={goToSkills}>
+        <AssignmentSVG width={36} height={36} />
+      </Icon>
+    </StyledHeader>
+  )
 }
