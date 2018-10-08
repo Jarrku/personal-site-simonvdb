@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Simon Van den Broeck",
-        short_name: "Simon VDB",
+        name: 'Simon Van den Broeck',
+        short_name: 'Simon VDB',
       },
     },
     // In your gatsby-config.js
@@ -30,7 +30,6 @@ module.exports = {
     // site!
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-react-next`,
     // This plugin exposes helper functions for processing
     // images with the NPM package “sharp”. It's used by
     // several other plugins.
@@ -60,6 +59,6 @@ module.exports = {
       },
     },
     // Parse JSON files
-    `gatsby-transformer-json`
+    `gatsby-transformer-json`,
   ],
 }
