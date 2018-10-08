@@ -50,7 +50,9 @@ class Layout extends React.Component<Props> {
               content: 'javascript, web development, react, frontend',
             },
           ]}
-        />
+        >
+          <html lang="en" />
+        </Helmet>
         <Header />
         {children}
       </Body>
