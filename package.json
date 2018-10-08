@@ -10,18 +10,14 @@
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
     "test": "jest",
-    "test:watch": "jest --watch",
-    "graphql-types": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/graphql-types.d.ts",
-    "precommit": "lint-staged"
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "date-fns": "^1.29.0",
     "gatsby": "^2.0.19",
     "gatsby-image": "^2.0.13",
     "gatsby-link": "^2.0.4",
-    "graphql": "0.11.7",
     "normalize.css": "^8.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -31,18 +27,13 @@
     "styled-components": "^3.4.9"
   },
   "devDependencies": {
-    "@types/enzyme": "^3.1.14",
     "@types/jest": "^23.3.3",
     "@types/node": "^10.11.4",
     "@types/react": "^16.4.16",
     "@types/react-dom": "^16.0.8",
     "@types/react-helmet": "^5.0.7",
     "@types/react-test-renderer": "^16.0.3",
-    "@types/webpack-env": "^1.13.6",
     "babel-plugin-styled-components": "^1.8.0",
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.6.0",
-    "gatsby-plugin-google-analytics": "2.0.6",
     "gatsby-plugin-manifest": "^2.0.4",
     "gatsby-plugin-netlify": "^2.0.1",
     "gatsby-plugin-offline": "2.0.5",
@@ -53,17 +44,14 @@
     "gatsby-source-filesystem": "2.0.2",
     "gatsby-transformer-json": "2.1.4",
     "gatsby-transformer-sharp": "2.1.3",
-    "graphql-code-generator": "^0.10.3",
     "husky": "1.1.1",
     "jest": "23.6.0",
     "lint-staged": "7.3.0",
     "prettier": "^1.14.3",
     "raw-loader": "^0.5.1",
     "react-test-renderer": "16.5.2",
-    "slash": "2.0.0",
     "ts-jest": "23.10.4",
     "ts-lint": "4.5.1",
-    "ts-loader": "^5.2.1",
     "typescript": "3.1.1"
   },
   "browerslist": [
@@ -106,5 +94,10 @@
       "tslint --fix",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
