@@ -3,11 +3,11 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { StaticQuery } from 'gatsby'
 
-import runPolyfills from '../util/polyfills'
+import runPolyfills from '../../util/polyfills'
 import 'normalize.css'
 import './fonts.css'
 
-import Header from '../sections/Header'
+import Header from '../../sections/Header'
 
 const background = require('./trianglify2.svg') as string
 
@@ -33,40 +33,27 @@ class Layout extends React.Component<Props> {
   }
 
   render() {
-    const { children, data } = this.props
+    const { children } = this.props
 
     return (
-      <StaticQuery
-        query={`
-        query SiteTitleQuery {
-          site {
-            siteMetadata {
-              title
-            }
-          }
-        }
-      `}
-        render={data => (
-          <Body>
-            <Helmet
-              title={data.site.siteMetadata.title}
-              meta={[
-                {
-                  name: 'description',
-                  content:
-                    'Portfolio website for Simon Van den Broeck, Junior Frontend Engineer',
-                },
-                {
-                  name: 'keywords',
-                  content: 'javascript, web development, react, frontend',
-                },
-              ]}
-            />
-            <Header />
-            {children}
-          </Body>
-        )}
-      />
+      <Body>
+        <Helmet
+          title="Simon Van den Broeck"
+          meta={[
+            {
+              name: 'description',
+              content:
+                'Portfolio website for Simon Van den Broeck, Junior Frontend Engineer',
+            },
+            {
+              name: 'keywords',
+              content: 'javascript, web development, react, frontend',
+            },
+          ]}
+        />
+        <Header />
+        {children}
+      </Body>
     )
   }
 }
