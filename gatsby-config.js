@@ -3,24 +3,12 @@ module.exports = {
     title: `Simon Van den Broeck`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',
-        // Puts tracking script in the head instead of the body
-        head: false,
-        // Setting this parameter is optional
-        anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
-      },
-    },
     `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Simon Van den Broeck",
-        short_name: "Simon VDB",
+        name: 'Simon Van den Broeck',
+        short_name: 'Simon VDB',
       },
     },
     // In your gatsby-config.js
@@ -30,7 +18,6 @@ module.exports = {
     // site!
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-react-next`,
     // This plugin exposes helper functions for processing
     // images with the NPM package “sharp”. It's used by
     // several other plugins.
@@ -60,6 +47,6 @@ module.exports = {
       },
     },
     // Parse JSON files
-    `gatsby-transformer-json`
+    `gatsby-transformer-json`,
   ],
 }

@@ -1,12 +1,13 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import { StaticQuery } from 'gatsby'
 
-import runPolyfills from '../util/polyfills'
+import runPolyfills from '../../util/polyfills'
 import 'normalize.css'
 import './fonts.css'
 
-import Header from '../sections/Header'
+import Header from '../../sections/Header'
 
 const background = require('./trianglify2.svg') as string
 
@@ -25,18 +26,19 @@ interface Props {
   }
   children: () => React.ReactChild
 }
+
 class Layout extends React.Component<Props> {
   componentDidMount() {
     runPolyfills()
   }
 
   render() {
-    const { children, data } = this.props
+    const { children } = this.props
 
     return (
       <Body>
         <Helmet
-          title={data.site.siteMetadata.title}
+          title="Simon Van den Broeck"
           meta={[
             {
               name: 'description',
@@ -48,22 +50,14 @@ class Layout extends React.Component<Props> {
               content: 'javascript, web development, react, frontend',
             },
           ]}
-        />
+        >
+          <html lang="en" />
+        </Helmet>
         <Header />
-        {children()}
+        {children}
       </Body>
     )
   }
 }
 
 export default Layout
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
